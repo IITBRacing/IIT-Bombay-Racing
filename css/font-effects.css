@@ -1,0 +1,539 @@
+/* ========================================
+   PREMIUM FONT EFFECTS & ANIMATIONS
+   Formula Student Racing Theme
+   ======================================== */
+
+/* Typography Base Styling */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Display Titles (Extra Large) */
+.main-title,
+.achievements-hero-title,
+.team-hero-content h1,
+.cars-hero-content h1 {
+    font-family: var(--font-display) !important;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: fadeInZoom 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+}
+
+/* Section Titles */
+.mission-title,
+.subsystems-title,
+.section-title,
+.section-title-center,
+.audio-title {
+    font-family: var(--font-heading) !important;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    animation: fadeInSlideDown 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* Headings H2 */
+h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* Headings H3 */
+h3 {
+    font-family: var(--font-accent);
+    font-weight: 600;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    letter-spacing: 0.08em;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+/* Paragraphs */
+p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+/* Navigation Links */
+.nav-links a {
+    font-family: var(--font-accent) !important;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Buttons */
+button,
+.btn-primary,
+.btn-secondary,
+.know-more-btn {
+    font-family: var(--font-accent) !important;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Stats & Numbers */
+.video-stat-number,
+.stat-number,
+.timeline-year {
+    font-family: var(--font-heading) !important;
+    font-weight: 900;
+}
+
+/* Labels */
+.video-stat-label,
+.stat-label {
+    font-family: var(--font-accent) !important;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* ========================================
+   FADE-IN ANIMATIONS
+   ======================================== */
+
+/* Fade In + Zoom */
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Fade In + Slide Up */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(3px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Fade In + Slide Down */
+@keyframes fadeInSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In + Slide Left */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade In + Slide Right */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade In Only */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Text Reveal (typing effect) */
+@keyframes textReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+        letter-spacing: 0.5em;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 0.1em;
+    }
+}
+
+/* Glow Fade In */
+@keyframes glowFadeIn {
+    0% {
+        opacity: 0;
+        text-shadow: 0 0 0 transparent;
+    }
+    50% {
+        opacity: 0.5;
+        text-shadow: 0 0 30px rgba(var(--accent-pink-rgb), 0.8);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(var(--accent-pink-rgb), 0.5);
+    }
+}
+
+/* ========================================
+   ELEMENT-SPECIFIC ANIMATIONS
+   ======================================== */
+
+/* Hero Content */
+.hero-content h1,
+.hero-content h2 {
+    animation: fadeInZoom 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.hero-content h1 {
+    animation-delay: 0.3s;
+}
+
+.hero-content h2 {
+    animation-delay: 0.6s;
+}
+
+/* Mission Items */
+.mission-item h3 {
+    animation: fadeInLeft 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.mission-item.reverse h3 {
+    animation: fadeInRight 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.mission-item p {
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+/* Team Section */
+.team-text h2 {
+    animation: glowFadeIn 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.team-subtitle {
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.team-point p {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.team-point:nth-child(1) p { animation-delay: 0.5s; }
+.team-point:nth-child(2) p { animation-delay: 0.7s; }
+.team-point:nth-child(3) p { animation-delay: 0.9s; }
+
+/* Achievement Cards */
+.achievement-title {
+    font-family: var(--font-heading) !important;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.achievement-card:hover .achievement-title {
+    animation: textReveal 0.5s ease-out forwards;
+}
+
+/* Car Names */
+.car-name {
+    font-family: var(--font-display) !important;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+}
+
+/* Member Names */
+.member-name {
+    font-family: var(--font-accent) !important;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.member-role {
+    font-family: var(--font-accent) !important;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+/* ========================================
+   TEXT EFFECTS
+   ======================================== */
+
+/* Gradient Text */
+.gradient-text {
+    background: var(--gradient-glow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Typewriter Effect */
+.typewriter-text {
+    overflow: hidden;
+    border-right: 3px solid var(--accent-pink);
+    white-space: nowrap;
+    animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--accent-pink);
+    }
+}
+
+/* Glitch Effect */
+.glitch-text {
+    position: relative;
+    animation: glitchAnimation 5s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch-text::before {
+    animation: glitchTop 1s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch-text::after {
+    animation: glitchBottom 1.5s infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchTop {
+    0%, 100% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, -2px);
+    }
+    40% {
+        transform: translate(-2px, 2px);
+    }
+    60% {
+        transform: translate(2px, -2px);
+    }
+    80% {
+        transform: translate(2px, 2px);
+    }
+}
+
+@keyframes glitchBottom {
+    0%, 100% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(2px, 2px);
+    }
+    40% {
+        transform: translate(2px, -2px);
+    }
+    60% {
+        transform: translate(-2px, 2px);
+    }
+    80% {
+        transform: translate(-2px, -2px);
+    }
+}
+
+/* Neon Text Glow */
+.neon-text {
+    color: #fff;
+    text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px var(--accent-pink),
+        0 0 82px var(--accent-pink),
+        0 0 92px var(--accent-pink),
+        0 0 102px var(--accent-pink),
+        0 0 151px var(--accent-pink);
+    animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow: 
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px var(--accent-pink),
+            0 0 82px var(--accent-pink),
+            0 0 92px var(--accent-pink),
+            0 0 102px var(--accent-pink),
+            0 0 151px var(--accent-pink);
+    }
+    to {
+        text-shadow: 
+            0 0 4px #fff,
+            0 0 7px #fff,
+            0 0 14px #fff,
+            0 0 28px var(--accent-pink),
+            0 0 54px var(--accent-pink),
+            0 0 64px var(--accent-pink),
+            0 0 74px var(--accent-pink),
+            0 0 104px var(--accent-pink);
+    }
+}
+
+/* ========================================
+   LOADING TEXT ANIMATION
+   ======================================== */
+
+.loading-text {
+    font-family: var(--font-display) !important;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+/* ========================================
+   SCROLL-TRIGGERED ANIMATIONS
+   ======================================== */
+
+/* Elements animate when they come into view */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+.stagger-children > *:nth-child(7) { animation-delay: 0.7s; }
+.stagger-children > *:nth-child(8) { animation-delay: 0.8s; }
+
+/* ========================================
+   RESPONSIVE FONT SIZES
+   ======================================== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+    
+    h2 {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+    
+    h3 {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+    }
+    
+    p {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+        line-height: 1.7;
+    }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.font-display { font-family: var(--font-display) !important; }
+.font-heading { font-family: var(--font-heading) !important; }
+.font-body { font-family: var(--font-body) !important; }
+.font-accent { font-family: var(--font-accent) !important; }
+
+.text-glow {
+    text-shadow: 0 0 20px rgba(var(--accent-pink-rgb), 0.6),
+                 0 0 40px rgba(var(--accent-pink-rgb), 0.3);
+}
+
+.text-bold { font-weight: 700; }
+.text-black { font-weight: 900; }
+.text-medium { font-weight: 500; }
+.text-light { font-weight: 300; }
+
+.letter-spacing-wide { letter-spacing: 0.15em; }
+.letter-spacing-wider { letter-spacing: 0.2em; }
+.letter-spacing-widest { letter-spacing: 0.3em; }
