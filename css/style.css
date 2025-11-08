@@ -3957,7 +3957,7 @@ footer::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../media/sponsor.JPG') center 60%/cover no-repeat;
+    background: url('../media/spons.png') center 60%/cover no-repeat;
     overflow: hidden;
 }
 
