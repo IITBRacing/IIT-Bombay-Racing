@@ -4187,6 +4187,287 @@ footer::before {
     transform: translateY(-3px);
 }
 
+/* Title Sponsor Section */
+.title-sponsor-section {
+    background: #000000;
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-header-center {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-top: 2rem;
+}
+
+.section-header-center::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(138, 43, 226, 0.4) 20%, 
+        rgba(218, 112, 214, 0.8) 50%, 
+        rgba(138, 43, 226, 0.4) 80%, 
+        transparent 100%);
+    border-radius: 10px;
+}
+
+.section-title-sponsor {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8a2be2 0%, #da70d6 50%, #ff006e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.title-sponsor-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at top, rgba(138, 43, 226, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at bottom, rgba(255, 0, 110, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.title-sponsor-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(20, 10, 20, 0.9) 100%);
+    border: 1px solid rgba(138, 43, 226, 0.4);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(138, 43, 226, 0.3),
+                0 0 100px rgba(255, 0, 110, 0.2);
+    transition: all 0.5s ease;
+}
+
+.title-sponsor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 100px rgba(138, 43, 226, 0.4),
+                0 0 120px rgba(255, 0, 110, 0.3);
+    border-color: rgba(138, 43, 226, 0.6);
+}
+
+.sponsor-header {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(255, 0, 110, 0.05) 100%);
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+    position: relative;
+}
+
+.sponsor-header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, transparent 70%);
+    filter: blur(60px);
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.title-sponsor-logo {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 30px rgba(138, 43, 226, 0.5));
+    transition: all 0.4s ease;
+}
+
+.title-sponsor-logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 40px rgba(138, 43, 226, 0.7));
+}
+
+.sponsor-body {
+    padding: 3rem;
+}
+
+.sponsor-name {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(135deg, #8a2be2 0%, #da70d6 50%, #ff006e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.8rem;
+    letter-spacing: 4px;
+}
+
+.sponsor-tagline {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(218, 112, 214, 0.8);
+    font-style: italic;
+    margin-bottom: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.sponsor-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-box {
+    background: rgba(138, 43, 226, 0.1);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    background: rgba(138, 43, 226, 0.15);
+    border-color: rgba(138, 43, 226, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+}
+
+.stat-value {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8a2be2;
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sponsor-description {
+    margin-bottom: 2rem;
+}
+
+.sponsor-description p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.sponsor-partners {
+    background: rgba(138, 43, 226, 0.05);
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.partners-label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #8a2be2;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+}
+
+.partners-list {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+    .sponsor-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .sponsor-body {
+        padding: 2rem;
+    }
+    
+    .sponsor-name {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-sponsor-section {
+        padding: 4rem 0;
+    }
+    
+    .title-sponsor-card {
+        margin: 0 1rem;
+    }
+    
+    .sponsor-header {
+        padding: 2rem;
+    }
+    
+    .title-sponsor-logo {
+        max-width: 250px;
+    }
+    
+    .sponsor-body {
+        padding: 2rem 1.5rem;
+    }
+    
+    .sponsor-name {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .sponsor-tagline {
+        font-size: 1rem;
+    }
+    
+    .stat-value {
+        font-size: 1.6rem;
+    }
+    
+    .sponsor-description p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+    
+    .partners-list {
+        font-size: 1rem;
+    }
+}
+
 /* Impact & Testimonials Section - Compact Horizontal Layout */
 .impact-testimonials {
     background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
