@@ -1,0 +1,137 @@
+/* Achievements Card Layout */
+.achievements-timeline {
+    background: #000000;
+    padding: 4rem 0;
+}
+
+.achievements-timeline .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.achievement-year-card {
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.05) 0%, rgba(0, 0, 0, 0.3) 100%);
+    border: 2px solid rgba(138, 43, 226, 0.6);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3),
+                0 0 40px rgba(138, 43, 226, 0.2),
+                inset 0 0 20px rgba(138, 43, 226, 0.1);
+}
+
+.achievement-year-card:hover {
+    border-color: rgba(138, 43, 226, 1);
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.6),
+                0 0 60px rgba(138, 43, 226, 0.4),
+                0 10px 40px rgba(138, 43, 226, 0.3),
+                inset 0 0 30px rgba(138, 43, 226, 0.15);
+    transform: translateY(-5px);
+}
+
+.year-header {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.year-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #8a2be2, #da70d6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+}
+
+.year-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(138, 43, 226, 0.8), transparent);
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.achievement-item {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.achievement-item.highlight {
+    border-color: rgba(138, 43, 226, 0.6);
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+}
+
+.achievement-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(138, 43, 226, 0.8);
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+}
+
+.achievement-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: #da70d6;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.achievement-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievement-item li {
+    padding: 0.5rem 0;
+    color: #d0d0d0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.15);
+}
+
+.achievement-item li:last-child {
+    border-bottom: none;
+}
+
+.achievement-item li strong {
+    color: #da70d6;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(138, 43, 226, 0.4);
+}
+
+.achievement-item.highlight li strong {
+    color: #ba55d3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .year-title {
+        font-size: 2rem;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .achievement-year-card {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
