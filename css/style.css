@@ -2578,10 +2578,21 @@ body:hover .cursor-glow {
     padding: 0 2rem;
     }
 
+/* Center last core team card if it's alone in a row */
+.core-team-grid .team-card:last-child:nth-child(3n + 1) {
+    grid-column: 2 / 3;
+}
+
     @media (max-width: 900px) {
         .core-team-grid {
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
+        }
+
+        .core-team-grid .team-card:last-child:nth-child(3n + 1) {
+            grid-column: 1 / -1;
+            justify-self: center;
+            width: calc((100% - 2rem) / 2);
         }
     }
 
