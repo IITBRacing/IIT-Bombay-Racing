@@ -7612,19 +7612,3 @@ section {
         visibility: visible !important;
     }
 }
-
-/* Temporarily hide Team page entry points and Team content. */
-.nav-links li:has(> a[href="team.html"]),
-.footer-links li:has(> a[href="team.html"]) {
-    display: none !important;
-}
-
-.nav-links a[href="team.html"],
-.footer-links a[href="team.html"] {
-    display: none !important;
-}
-
-.team-section,
-.team-page-hidden main {
-    display: none !important;
-}
