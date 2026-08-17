@@ -7612,3 +7612,24 @@ section {
         visibility: visible !important;
     }
 }
+
+body.home-page .nav-links li:has(> a[href="team.html"]),
+body.home-page .footer-links li:has(> a[href="team.html"]) {
+    display: list-item !important;
+}
+
+body.home-page .nav-links a[href="team.html"],
+body.home-page .footer-links a[href="team.html"] {
+    display: inline-flex !important;
+}
+
+body.home-page .team-section {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+body.home-page .team-content {
+    display: grid !important;
+}
