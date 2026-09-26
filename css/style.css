@@ -2674,17 +2674,7 @@ body:hover .cursor-glow {
     padding: 0;
 }
 
-.previous-team-grid .member-role {
-    font-size: 0.95rem;
-    line-height: 1.45;
-    letter-spacing: 1.2px;
-}
-
-.previous-team-grid .team-card:hover .member-role {
-    letter-spacing: 1.8px;
-}
-
-    @media (max-width: 900px) {
+@media (max-width: 900px) {
         .team-seasons {
             grid-template-columns: 1fr;
             gap: 1.5rem;
@@ -2735,6 +2725,9 @@ body:hover .cursor-glow {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .team-card::before {
@@ -2773,7 +2766,7 @@ body:hover .cursor-glow {
 
 .team-card-image {
     width: 100%;
-    height: 280px;
+    height: 320px;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 1.5rem;
@@ -2827,6 +2820,7 @@ body:hover .cursor-glow {
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
     transition: all 0.3s ease;
+    font-family: var(--font-heading);
 }
 
 .team-card:hover .member-name {
@@ -2843,6 +2837,12 @@ body:hover .cursor-glow {
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: all 0.3s ease;
+    flex-grow: 1;
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-accent);
 }
 
 .team-card:hover .member-role {
@@ -2949,15 +2949,65 @@ body:hover .cursor-glow {
 .managers-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    align-items: stretch;
 }
 
 /* Center last card if it's alone in a row */
 .managers-grid .team-card:last-child:nth-child(3n + 1) {
     grid-column: 2 / 3;
+}
+
+
+/* Managers & DE headings inside tab panel */
+.team-season-panel .section-title-center {
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(var(--accent-pink-rgb), 0.2);
+}
+
+.team-season-panel .managers-grid + .section-title-center,
+.team-season-panel .section-title-center:first-of-type {
+    margin-top: 3rem;
+}
+
+/* Division sub-headings (MECHANICAL TEAM, etc.) */
+.team-season-panel h3[style] {
+    margin-top: 3rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+
+/* Division sub-headings (MECHANICAL TEAM, ELECTRICAL TEAM, etc.) */
+.division-heading {
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.division-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
 }
 
 /* Design Engineers Section */
@@ -3632,7 +3682,7 @@ body:hover .cursor-glow {
     margin: 0 auto;
     background: rgba(var(--black-soft), 0.6);
     border-radius: 20px;
-    padding: 2rem;
+    padding: 0;
     box-shadow: 
         0 20px 60px rgba(0, 0, 0, 0.5),
         0 0 0 1px rgba(var(--accent-pink-rgb), 0.2),
@@ -3701,7 +3751,7 @@ body:hover .cursor-glow {
 
 @media (max-width: 768px) {
     .pdf-viewer-container {
-        padding: 1rem;
+        padding: 0;
         border-radius: 12px;
     }
     
