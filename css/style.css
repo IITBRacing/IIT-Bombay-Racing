@@ -3613,6 +3613,12 @@ body:hover .cursor-glow {
     z-index: 1;
 }
 
+.sponsor-slide img.sponsor-logo-simscale {
+    width: 180px;
+    height: auto;
+    max-height: 60px;
+}
+
 .sponsor-slide img:hover {
     transform: scale(1.15);
     filter: brightness(1.1) contrast(1.2);
