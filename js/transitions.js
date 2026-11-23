@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
     
     // Handle all internal links
-    const links = document.querySelectorAll('a[href^="index.html"], a[href^="team.html"], a[href^="achievements.html"], a[href^="cars.html"], a[href^="partners.html"], a[href^="about.html"], a[href^="media.html"]');
+    const links = document.querySelectorAll('a[href^="index.html"], a[href^="team.html"], a[href^="achievements.html"], a[href^="cars.html"], a[href^="partners.html"], a[href^="about.html"], a[href^="media.html"], a[href^="newsletters.html"]');
     
     links.forEach(link => {
         link.addEventListener('click', function(e) {
